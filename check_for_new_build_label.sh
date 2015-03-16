@@ -6,15 +6,11 @@
 ALERT_ADDRESS=$1
 
 WORK_DIRECTORY=./aosp/checkouts/
-GIT_LOG=./aosp/build.gitlog
-TAGS_FILE=./aosp/existing_build_tags
+GIT_LOG=../../../aosp/build_gitlog
+TAGS_FILE=../../../aosp/existing_build_tags
 
 if [ ! -d $WORK_DIRECTORY ]; then
 	mkdir -p $WORK_DIRECTORY
-fi
-
-if [ ! -f $TAGS_FILE ]; then
-	touch $TAGS_FILE
 fi
 
 cd $WORK_DIRECTORY
@@ -23,6 +19,10 @@ if [ ! -d build ]; then
 fi
 
 cd build
+if [ ! -f $TAGS_FILE ]; then
+    touch $TAGS_FILE
+fi
+
 echo ------ >> $GIT_LOG
 date >> $GIT_LOG
 git pull >> $GIT_LOG 2>&1
