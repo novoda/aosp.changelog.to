@@ -5,9 +5,9 @@
 
 ALERT_ADDRESS=$1
 
-WORK_DIRECTORY=~/aosp/checkouts/
-GIT_LOG=~/aosp/build.gitlog
-TAGS_FILE=~/aosp/existing_build_tags
+WORK_DIRECTORY=./aosp/checkouts/
+GIT_LOG=./aosp/build.gitlog
+TAGS_FILE=./aosp/existing_build_tags
 
 if [ ! -d $WORK_DIRECTORY ]; then
 	mkdir -p $WORK_DIRECTORY
