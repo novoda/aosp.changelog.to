@@ -3,6 +3,11 @@
 # This script does a diff of the tags for AOSP since last time it ran
 # if a new tag is found it will email the address given as the first arguemnt
 
+log () {
+    echo $@
+    echo $@ >> $GIT_LOG
+}
+
 ALERT_ADDRESS=$1
 
 WORK_DIRECTORY=./aosp/checkouts/
@@ -33,7 +38,9 @@ rm $TAGS_FILE
 mv $TAGS_FILE.new $TAGS_FILE
 
 if [ -s $TAGS_FILE.diff ]; then
+    log "New tags found!"
+    cat $TAGS_FILE.diff
 	mail -s "New AOSP Build Tags" $ALERT_ADDRESS < $TAGS_FILE.diff
 else
-	echo "No new tags found" >> $GIT_LOG
+	log "No new tags found"
 fi
