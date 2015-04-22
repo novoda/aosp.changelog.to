@@ -21,7 +21,7 @@ PREVIOUS_TAG=${TAGS_ARRAY[1]}
 
 # Update the AOSP working directory with a repo sync to the target tag
 cd $AOSP_DIRECTORY
-#repo init -u https://android.googlesource.com/platform/manifest -b $TARGET_TAG
-#repo sync
+repo init -u https://android.googlesource.com/platform/manifest -b $TARGET_TAG
+repo sync
 
 ./get_gitlog.sh $PREVIOUS_TAG $TARGET_TAG
