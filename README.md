@@ -8,7 +8,7 @@ _Will_ generates a change log between different aosp tags.
 $ ./check_for_new_build_label.sh <notification email address> <AOSP working directory>
 ```
 
-The param `AOSP working directory` is optional and must specify the *absolute* path of the directory in which will be cloned the whole AOSP code.
+The param `AOSP working directory` is optional and must specify the *absolute* path of the directory in which the whole AOSP code will be cloned.
 If this parameter is passed, when a new tag is found on the remote the creation of the corresponding changelog HTML page is started automatically.
 
 #### Changelog generation
