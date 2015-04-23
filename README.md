@@ -16,3 +16,4 @@ To generate a changelog between two tags use
 ```
 ./get_gitlog.sh <old tag> <new tag>
 ```
+from the AOSP working directory.
