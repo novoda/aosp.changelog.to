@@ -3,7 +3,7 @@
 AOSP_DIRECTORY=$1
 WORK_DIRECTORY=./aosp/checkouts/build
 
-# Prepare the AOSP working directory with the templates and executables used for the changelof generation
+# Prepare the AOSP working directory with the templates and executables used for the changelog generation
 if [ ! -d $AOSP_DIRECTORY ]; then
     mkdir -p $AOSP_DIRECTORY
 fi
