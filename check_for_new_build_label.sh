@@ -9,6 +9,7 @@ log () {
 }
 
 ALERT_ADDRESS=$1
+AOSP_DIRECTORY=$2
 
 WORK_DIRECTORY=./aosp/checkouts/
 GIT_LOG=../../../aosp/build_gitlog
@@ -41,6 +42,9 @@ if [ -s $TAGS_FILE.diff ]; then
     log "New tags found!"
     cat $TAGS_FILE.diff
 	mail -s "New AOSP Build Tags" $ALERT_ADDRESS < $TAGS_FILE.diff
+    if [ -n "$AOSP_DIRECTORY" ]; then
+        ../../../generate_last_changelog.sh $AOSP_DIRECTORY
+    fi
 else
 	log "No new tags found"
 fi
