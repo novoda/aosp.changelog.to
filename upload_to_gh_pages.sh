@@ -6,7 +6,7 @@ LAST_CHANGELOG_PATH="$AOSP_DIRECTORY/$LAST_CHANGELOG"
 
 PUBLISH_DIRECTORY=./publish/
 CURRENT_REPO_URL=$(git config --get remote.origin.url)
-PUBLISH_BRANCH="gh-pages-test"
+PUBLISH_BRANCH="gh-pages"
 
 # If not existing yet, create the publish dir and init the repo with the publish branch
 if [ ! -d $PUBLISH_DIRECTORY ]; then
