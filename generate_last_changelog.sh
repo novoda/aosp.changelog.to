@@ -19,7 +19,7 @@ TAGS_ARRAY=(`echo $LAST_TAGS | tr "," "\n"`)
 TARGET_TAG=${TAGS_ARRAY[0]}
 PREVIOUS_TAG=${TAGS_ARRAY[1]}
 
-echo "Generating changelg from $PREVIOUS_TAG to $TARGET_TAG"
+echo "Generating changelog from $PREVIOUS_TAG to $TARGET_TAG"
 
 # Update the AOSP working directory with a repo sync to the target tag
 cd $AOSP_DIRECTORY
