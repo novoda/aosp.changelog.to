@@ -14,10 +14,12 @@ cp -r html_templates $AOSP_DIRECTORY/
 
 # Retrieve the target tag and the one right before
 cd $WORK_DIRECTORY
-LAST_TAGS=$(git for-each-ref refs/tags --sort=-taggerdate --format='%(refname)' --count=2 | grep -o 'android.*')
+LAST_TAGS=$(git for-each-ref refs/tags --sort=-taggerdate --format='%(refname)' | grep -o 'android\-[0-9][\.0-9]*_.*')
 TAGS_ARRAY=(`echo $LAST_TAGS | tr "," "\n"`)
 TARGET_TAG=${TAGS_ARRAY[0]}
 PREVIOUS_TAG=${TAGS_ARRAY[1]}
+
+echo "Generating changelg from $PREVIOUS_TAG to $TARGET_TAG"
 
 # Update the AOSP working directory with a repo sync to the target tag
 cd $AOSP_DIRECTORY
