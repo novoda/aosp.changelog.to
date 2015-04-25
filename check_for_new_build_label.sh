@@ -44,6 +44,7 @@ if [ -s $TAGS_FILE.diff ]; then
 	mail -s "New AOSP Build Tags" $ALERT_ADDRESS < $TAGS_FILE.diff
     if [ -n "$AOSP_DIRECTORY" ]; then
         ../../../generate_last_changelog.sh $AOSP_DIRECTORY
+        ../../../upload_to_gh_pages.sh $AOSP_DIRECTORY
     fi
 else
 	log "No new tags found"
