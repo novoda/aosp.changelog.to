@@ -14,6 +14,16 @@ If this parameter is passed, when a new tag is found on the remote the creation 
 #### Changelog generation
 To generate a changelog between two tags use
 ```
-./get_gitlog.sh <old tag> <new tag>
+$ ./get_gitlog.sh <old tag> <new tag>
 ```
 from the AOSP working directory.
+
+#### Changelog publication
+Every time a new changelog is generated, it is published in the `gh-pages` branch of the current repo.
+This requires the `gh-pages` branch to exist in the current repo.
+
+The `gh-pages` branch is cloned in a subdirectory of the generator repo, the changelog is copied from the AOSP_DIRECTORY, committed and pushed, using the script
+```
+$ ./upload_to_gh_pages.sh <AOSP working directory>
+```
+The param `AOSP working directory` is **mandatory** and must specify the *absolute* path of the directory in which the whole AOSP code has been cloned.
