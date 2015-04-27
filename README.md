@@ -20,6 +20,7 @@ from the AOSP working directory.
 
 #### Changelog publication
 Every time a new changelog is generated, it is published in the `gh-pages` branch of the current repo.
+This requires the `gh-pages` branch to exist in the current repo.
 
 The `gh-pages` branch is cloned in a subdirectory of the generator repo, the changelog is copied from the AOSP_DIRECTORY, committed and pushed, using the script
 ```
