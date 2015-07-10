@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Novoda Ltd.">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" >
+<link rel="stylesheet" type="text/css" href="./assets/style.css" >
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="./assets/favicon.svg" type="image/svg">
+<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+<link rel="author" href="http://www.novoda.com/" >
+
+<title>android-5.1.1_r6 to android-5.1.1_r7 AOSP changelog</title>
+
+<script>
+function show(sectionId) {
+	if (document.getElementById(sectionId)) {
+		document.getElementById(sectionId+'-show').style.display = 'none';
+		document.getElementById(sectionId+'-hide').style.display = 'inline';
+		document.getElementById(sectionId).style.display = 'block';
+	}
+}
+
+function hide(sectionId) {
+	if (document.getElementById(sectionId)) {
+		document.getElementById(sectionId+'-show').style.display = 'inline';
+		document.getElementById(sectionId+'-hide').style.display = 'none';
+		document.getElementById(sectionId).style.display = 'none';
+	}
+}
+</script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./index.html">AOSP Changelogs</a>         
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <a class="navbar-brand" href="http://www.novoda.com"><img class="navbar-logo" src="./assets/logo-blue.svg" /></a>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container card">
+<div class="row">
+	<div class="col-md-12">
+		<h1>android-5.1.1_r6 to android-5.1.1_r7 AOSP changelog</h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+<p>This only includes the Android Open Source Project changes and does not include any changes
+in any proprietary components included by Google or any hardware manufacturer. The raw log was 
+generated using a modified version of <a href="https://groups.google.com/d/msg/android-building/0DtsHawjs4k/And8o3Dni_UJ">this script</a> written by <a href="https://plus.google.com/112218872649456413744/posts">JBQ</a> and improved by <a href="https://plus.google.com/+AlSutton/posts">Al Sutton</a>.</p>
+
+<p><strong>Please do not copy this without attribution to this site and JBQ for the original script.</strong></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="changes">		
+<p><h2><a href="#" id="platform_bootable_recovery-show" class="showLink" onclick="show('platform_bootable_recovery');return false;">+</a><a href="#" id="platform_bootable_recovery-hide" class="hideLink" onclick="hide('platform_bootable_recovery');return false;">-</a>&nbsp;<a name="platform_bootable_recovery" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/bootable/recovery">platform/bootable/recovery</a></h2>
+<div id="platform_bootable_recovery"><a href="https://android.googlesource.com/platform/bootable/recovery/+/0e5356a">0e5356a</a> :  DO NOT MERGE Revert "Erase PST partition if its marked to be erased."<br />
+<a href="https://android.googlesource.com/platform/bootable/recovery/+/5b9defe">5b9defe</a> :  updater: Check the return value from ApplyImagePatch / ApplyBSDiffPatch<br />
+</div></p>
+
+<p><h2><a href="#" id="platform_build-show" class="showLink" onclick="show('platform_build');return false;">+</a><a href="#" id="platform_build-hide" class="hideLink" onclick="hide('platform_build');return false;">-</a>&nbsp;<a name="platform_build" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/build">platform/build</a></h2>
+<div id="platform_build"><a href="https://android.googlesource.com/platform/build/+/2e33977">2e33977</a> :  "LMY48G"<br />
+<a href="https://android.googlesource.com/platform/build/+/37da509">37da509</a> :  "LMY48F"<br />
+<a href="https://android.googlesource.com/platform/build/+/e399b9d">e399b9d</a> :  "LMY48E"<br />
+<a href="https://android.googlesource.com/platform/build/+/4dc6a6a">4dc6a6a</a> :  "LMY48D"<br />
+<a href="https://android.googlesource.com/platform/build/+/e60ffef">e60ffef</a> :  "LMY48C"<br />
+<a href="https://android.googlesource.com/platform/build/+/b8c066d">b8c066d</a> :  Really include drawables for all densities.<br />
+<a href="https://android.googlesource.com/platform/build/+/0b02dd4">0b02dd4</a> :  "LMY48B"<br />
+<a href="https://android.googlesource.com/platform/build/+/a8cf30e">a8cf30e</a> :  "LMY47Z"<br />
+<a href="https://android.googlesource.com/platform/build/+/4f2b898">4f2b898</a> :  "LMY47Y"<br />
+<a href="https://android.googlesource.com/platform/build/+/793c7e3">793c7e3</a> :  "LMY47X"<br />
+<a href="https://android.googlesource.com/platform/build/+/76db86a">76db86a</a> :  "LMY47W"<br />
+<a href="https://android.googlesource.com/platform/build/+/a9c8e58">a9c8e58</a> :  "LMY47V"<br />
+<a href="https://android.googlesource.com/platform/build/+/b2bc140">b2bc140</a> :  "LMY47U"<br />
+<a href="https://android.googlesource.com/platform/build/+/3892a6c">3892a6c</a> :  "LMY47T"<br />
+<a href="https://android.googlesource.com/platform/build/+/60c5a09">60c5a09</a> :  "LMY47S"<br />
+<a href="https://android.googlesource.com/platform/build/+/9ef1170">9ef1170</a> :  DO NOT MERGE - Bump version to 5.1.1<br />
+<a href="https://android.googlesource.com/platform/build/+/33045be">33045be</a> :  "LMY47R"<br />
+<a href="https://android.googlesource.com/platform/build/+/cc61059">cc61059</a> :  "LMY47Q"<br />
+<a href="https://android.googlesource.com/platform/build/+/caa45d6">caa45d6</a> :  "LMY47P"<br />
+<a href="https://android.googlesource.com/platform/build/+/1ac5b83">1ac5b83</a> :  "LMY47O"<br />
+<a href="https://android.googlesource.com/platform/build/+/128bb23">128bb23</a> :  "LMY47N"<br />
+<a href="https://android.googlesource.com/platform/build/+/9830104">9830104</a> :  "LVY47H"<br />
+<a href="https://android.googlesource.com/platform/build/+/4278529">4278529</a> :  "LMY47M"<br />
+<a href="https://android.googlesource.com/platform/build/+/4522f41">4522f41</a> :  "LMY47L"<br />
+<a href="https://android.googlesource.com/platform/build/+/29f45d8">29f45d8</a> :  "LVY47G"<br />
+<a href="https://android.googlesource.com/platform/build/+/bd5479c">bd5479c</a> :  "LMY47K"<br />
+<a href="https://android.googlesource.com/platform/build/+/5a0b3c7">5a0b3c7</a> :  "LMY47J"<br />
+<a href="https://android.googlesource.com/platform/build/+/d61ef57">d61ef57</a> :  "LMY47I"<br />
+<a href="https://android.googlesource.com/platform/build/+/609e3fd">609e3fd</a> :  "LVY47F"<br />
+<a href="https://android.googlesource.com/platform/build/+/35a48c6">35a48c6</a> :  "LVY62"<br />
+<a href="https://android.googlesource.com/platform/build/+/8d5f0f9">8d5f0f9</a> :  "LMY47H"<br />
+<a href="https://android.googlesource.com/platform/build/+/16eea6e">16eea6e</a> :  LMY47G<br />
+<a href="https://android.googlesource.com/platform/build/+/be9ec01">be9ec01</a> :  "LMY47F"<br />
+<a href="https://android.googlesource.com/platform/build/+/dce4c51">dce4c51</a> :  "LVY47E"<br />
+<a href="https://android.googlesource.com/platform/build/+/7b2e9f0">7b2e9f0</a> :  LMY47E<br />
+<a href="https://android.googlesource.com/platform/build/+/1349b15">1349b15</a> :  "LVY47D"<br />
+<a href="https://android.googlesource.com/platform/build/+/d0a45ac">d0a45ac</a> :  "LVY50"<br />
+<a href="https://android.googlesource.com/platform/build/+/67169cf">67169cf</a> :  "LVY47C"<br />
+<a href="https://android.googlesource.com/platform/build/+/50588a2">50588a2</a> :  "LVY47B"<br />
+<a href="https://android.googlesource.com/platform/build/+/9c95d87">9c95d87</a> :  "LVY47"<br />
+<a href="https://android.googlesource.com/platform/build/+/bdeec0c">bdeec0c</a> :  "LVY44"<br />
+<a href="https://android.googlesource.com/platform/build/+/885268a">885268a</a> :  "LVY41"<br />
+<a href="https://android.googlesource.com/platform/build/+/e8ea815">e8ea815</a> :  LVY36F<br />
+<a href="https://android.googlesource.com/platform/build/+/31e3941">31e3941</a> :  "LVY36E"<br />
+<a href="https://android.googlesource.com/platform/build/+/b863c99">b863c99</a> :  "LVY36D"<br />
+<a href="https://android.googlesource.com/platform/build/+/cf3495b">cf3495b</a> :  LVY36C<br />
+<a href="https://android.googlesource.com/platform/build/+/74a5c02">74a5c02</a> :  "LVY36B"<br />
+<a href="https://android.googlesource.com/platform/build/+/b90c6e0">b90c6e0</a> :  "LVY35D"<br />
+<a href="https://android.googlesource.com/platform/build/+/cfbcbc3">cfbcbc3</a> :  "LVY35C"<br />
+<a href="https://android.googlesource.com/platform/build/+/700fb5d">700fb5d</a> :  "LVY35B"<br />
+<a href="https://android.googlesource.com/platform/build/+/6a17d6a">6a17d6a</a> :  LVY35<br />
+<a href="https://android.googlesource.com/platform/build/+/f1bae0a">f1bae0a</a> :  "LVY36"<br />
+<a href="https://android.googlesource.com/platform/build/+/3f2a597">3f2a597</a> :  "LVY34B"<br />
+<a href="https://android.googlesource.com/platform/build/+/8a746ce">8a746ce</a> :  "LVY33"<br />
+<a href="https://android.googlesource.com/platform/build/+/12c5582">12c5582</a> :  LVY29G<br />
+<a href="https://android.googlesource.com/platform/build/+/1f73e71">1f73e71</a> :  "LVY29F"<br />
+<a href="https://android.googlesource.com/platform/build/+/a00ec7b">a00ec7b</a> :  "LVY29C"<br />
+<a href="https://android.googlesource.com/platform/build/+/c1d901e">c1d901e</a> :  "LVY29B"<br />
+<a href="https://android.googlesource.com/platform/build/+/653c85a">653c85a</a> :  "LVY29"<br />
+<a href="https://android.googlesource.com/platform/build/+/e4570c4">e4570c4</a> :  "LVY27B"<br />
+<a href="https://android.googlesource.com/platform/build/+/ef7e792">ef7e792</a> :  "LVY28"<br />
+<a href="https://android.googlesource.com/platform/build/+/0fe1152">0fe1152</a> :  "LVY22E"<br />
+<a href="https://android.googlesource.com/platform/build/+/98fb681">98fb681</a> :  "LVY26"<br />
+<a href="https://android.googlesource.com/platform/build/+/3ce16cb">3ce16cb</a> :  "LVY15H"<br />
+<a href="https://android.googlesource.com/platform/build/+/efb18ab">efb18ab</a> :  "LVY15G"<br />
+<a href="https://android.googlesource.com/platform/build/+/00b2126">00b2126</a> :  "LVY15F"<br />
+<a href="https://android.googlesource.com/platform/build/+/a5def7f">a5def7f</a> :  "LVY15E"<br />
+<a href="https://android.googlesource.com/platform/build/+/74add38">74add38</a> :  LVY15D<br />
+<a href="https://android.googlesource.com/platform/build/+/26ef3da">26ef3da</a> :  "LVY15C"<br />
+<a href="https://android.googlesource.com/platform/build/+/c0dd18c">c0dd18c</a> :  "LVY16"<br />
+<a href="https://android.googlesource.com/platform/build/+/06f19f8">06f19f8</a> :  "LVY12B"<br />
+<a href="https://android.googlesource.com/platform/build/+/2787067">2787067</a> :  "LVY13"<br />
+<a href="https://android.googlesource.com/platform/build/+/12e930a">12e930a</a> :  "LVY08E"<br />
+<a href="https://android.googlesource.com/platform/build/+/b569c5e">b569c5e</a> :  "LVY12"<br />
+<a href="https://android.googlesource.com/platform/build/+/cbc5dfe">cbc5dfe</a> :  "LVY06B"<br />
+<a href="https://android.googlesource.com/platform/build/+/bb7f484">bb7f484</a> :  "LVY07"<br />
+<a href="https://android.googlesource.com/platform/build/+/776bc01">776bc01</a> :  "LVX72N"<br />
+<a href="https://android.googlesource.com/platform/build/+/8eca678">8eca678</a> :  "LMY02"<br />
+<a href="https://android.googlesource.com/platform/build/+/f7fc077">f7fc077</a> :  "LVX72M"<br />
+<a href="https://android.googlesource.com/platform/build/+/b1682ad">b1682ad</a> :  "LVX72L"<br />
+<a href="https://android.googlesource.com/platform/build/+/8551158">8551158</a> :  "LVX72K"<br />
+<a href="https://android.googlesource.com/platform/build/+/d2f3cbe">d2f3cbe</a> :  "LVX72J"<br />
+<a href="https://android.googlesource.com/platform/build/+/feeecee">feeecee</a> :  LVX72I<br />
+<a href="https://android.googlesource.com/platform/build/+/bff4863">bff4863</a> :  "LVX78"<br />
+<a href="https://android.googlesource.com/platform/build/+/d6cde28">d6cde28</a> :  "LVX72H"<br />
+<a href="https://android.googlesource.com/platform/build/+/1879686">1879686</a> :  LVX72G<br />
+<a href="https://android.googlesource.com/platform/build/+/a44f27d">a44f27d</a> :  "LVX72F"<br />
+<a href="https://android.googlesource.com/platform/build/+/7b7ad72">7b7ad72</a> :  LVX65I<br />
+<a href="https://android.googlesource.com/platform/build/+/375cd9c">375cd9c</a> :  "LVX65H"<br />
+<a href="https://android.googlesource.com/platform/build/+/ecaf8ff">ecaf8ff</a> :  "LVX65G"<br />
+<a href="https://android.googlesource.com/platform/build/+/98fecb7">98fecb7</a> :  "LVX65F"<br />
+<a href="https://android.googlesource.com/platform/build/+/cdf914c">cdf914c</a> :  "LVX65E"<br />
+<a href="https://android.googlesource.com/platform/build/+/1e6623d">1e6623d</a> :  "LVX65D"<br />
+<a href="https://android.googlesource.com/platform/build/+/ca5aa62">ca5aa62</a> :  "LVX65C"<br />
+<a href="https://android.googlesource.com/platform/build/+/083dc56">083dc56</a> :  "LVX55E"<br />
+<a href="https://android.googlesource.com/platform/build/+/e3ec9b3">e3ec9b3</a> :  LVX44L<br />
+<a href="https://android.googlesource.com/platform/build/+/ffab718">ffab718</a> :  LVX44K<br />
+<a href="https://android.googlesource.com/platform/build/+/f90d4f6">f90d4f6</a> :  "LVX44J"<br />
+<a href="https://android.googlesource.com/platform/build/+/9a5396b">9a5396b</a> :  LVX44I<br />
+<a href="https://android.googlesource.com/platform/build/+/c8a68ff">c8a68ff</a> :  LVX44H<br />
+<a href="https://android.googlesource.com/platform/build/+/b28957e">b28957e</a> :  "LVX44G"<br />
+<a href="https://android.googlesource.com/platform/build/+/e75c1f9">e75c1f9</a> :  "LVX50"<br />
+<a href="https://android.googlesource.com/platform/build/+/e11182b">e11182b</a> :  "LVX44F"<br />
+<a href="https://android.googlesource.com/platform/build/+/2314b97">2314b97</a> :  "LVX44E"<br />
+<a href="https://android.googlesource.com/platform/build/+/6274dc2">6274dc2</a> :  Fix Build iD<br />
+</div></p>
+
+<p><h2><a href="#" id="platform_cts-show" class="showLink" onclick="show('platform_cts');return false;">+</a><a href="#" id="platform_cts-hide" class="hideLink" onclick="hide('platform_cts');return false;">-</a>&nbsp;<a name="platform_cts" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/cts">platform/cts</a></h2>
+<div id="platform_cts"><a href="https://android.googlesource.com/platform/cts/+/cc8bdfa">cc8bdfa</a> :  Add android.hardware.cts.SensorTest#testBatchAndFlush to knownfailures<br />
+</div></p>
+
+<p><h2><a href="#" id="platform_development-show" class="showLink" onclick="show('platform_development');return false;">+</a><a href="#" id="platform_development-hide" class="hideLink" onclick="hide('platform_development');return false;">-</a>&nbsp;<a name="platform_development" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/development">platform/development</a></h2>
+<div id="platform_development"><a href="https://android.googlesource.com/platform/development/+/fcc638d">fcc638d</a> :  Fix the build<br />
+</div></p>
+
+<p><h2><a href="#" id="device_asus_fugu-show" class="showLink" onclick="show('device_asus_fugu');return false;">+</a><a href="#" id="device_asus_fugu-hide" class="hideLink" onclick="hide('device_asus_fugu');return false;">-</a>&nbsp;<a name="device_asus_fugu" class="nonLink">Project:</a> <a href="https://android.googlesource.com/device/asus/fugu">device/asus/fugu</a></h2>
+<div id="device_asus_fugu"><a href="https://android.googlesource.com/device/asus/fugu/+/f87d64d">f87d64d</a> :  recovery: Add option to view recovery logs on Fugu<br />
+</div></p>
+
+<p><h2><a href="#" id="device_htc_flounder-show" class="showLink" onclick="show('device_htc_flounder');return false;">+</a><a href="#" id="device_htc_flounder-hide" class="hideLink" onclick="hide('device_htc_flounder');return false;">-</a>&nbsp;<a name="device_htc_flounder" class="nonLink">Project:</a> <a href="https://android.googlesource.com/device/htc/flounder">device/htc/flounder</a></h2>
+<div id="device_htc_flounder"><a href="https://android.googlesource.com/device/htc/flounder/+/78cb63c">78cb63c</a> :  Update required bootloader for MR1<br />
+<a href="https://android.googlesource.com/device/htc/flounder/+/2fadd4e">2fadd4e</a> :  DO NOT MERGE: disable image signing<br />
+<a href="https://android.googlesource.com/device/htc/flounder/+/02931a8">02931a8</a> :  flounder: require bootloader 3.44.0.0122<br />
+<a href="https://android.googlesource.com/device/htc/flounder/+/c9f037f">c9f037f</a> :  flounder: require bootloader 3.44.0.0122<br />
+</div></p>
+
+<p><h2><a href="#" id="device_lge_hammerhead-show" class="showLink" onclick="show('device_lge_hammerhead');return false;">+</a><a href="#" id="device_lge_hammerhead-hide" class="hideLink" onclick="hide('device_lge_hammerhead');return false;">-</a>&nbsp;<a name="device_lge_hammerhead" class="nonLink">Project:</a> <a href="https://android.googlesource.com/device/lge/hammerhead">device/lge/hammerhead</a></h2>
+<div id="device_lge_hammerhead"><a href="https://android.googlesource.com/device/lge/hammerhead/+/5e1dad8">5e1dad8</a> :  mm-camera-interface: Retry in case of timeouts<br />
+<a href="https://android.googlesource.com/device/lge/hammerhead/+/545aef9">545aef9</a> :  hammerhead: switch back to dlmalloc<br />
+</div></p>
+
+<p><h2><a href="#" id="device_moto_shamu-show" class="showLink" onclick="show('device_moto_shamu');return false;">+</a><a href="#" id="device_moto_shamu-hide" class="hideLink" onclick="hide('device_moto_shamu');return false;">-</a>&nbsp;<a name="device_moto_shamu" class="nonLink">Project:</a> <a href="https://android.googlesource.com/device/moto/shamu">device/moto/shamu</a></h2>
+<div id="device_moto_shamu"><a href="https://android.googlesource.com/device/moto/shamu/+/d811272">d811272</a> :  change adspd to from late_start to main.<br />
+<a href="https://android.googlesource.com/device/moto/shamu/+/92bbf08">92bbf08</a> :  fstab.shamu: Mark cache and userdata as "formattable"<br />
+<a href="https://android.googlesource.com/device/moto/shamu/+/2512496">2512496</a> :  DO NOT MERGE: mm-camera-interface: Retry in case of timeouts<br />
+<a href="https://android.googlesource.com/device/moto/shamu/+/8766777">8766777</a> :  DO NOT MERGE: Camera3: Increase retry count when opening camera<br />
+<a href="https://android.googlesource.com/device/moto/shamu/+/ea782d1">ea782d1</a> :  Config change to not show swap button after merging calls into Cdma conference.<br />
+<a href="https://android.googlesource.com/device/moto/shamu/+/cf68b24">cf68b24</a> :  Add SELinux Policy for RILD to access FSG partition<br />
+<a href="https://android.googlesource.com/device/moto/shamu/+/08df735">08df735</a> :  Config the default value for nova mcfg property<br />
+</div></p>
+
+<p><h2><a href="#" id="device_samsung_manta-show" class="showLink" onclick="show('device_samsung_manta');return false;">+</a><a href="#" id="device_samsung_manta-hide" class="hideLink" onclick="hide('device_samsung_manta');return false;">-</a>&nbsp;<a name="device_samsung_manta" class="nonLink">Project:</a> <a href="https://android.googlesource.com/device/samsung/manta">device/samsung/manta</a></h2>
+<div id="device_samsung_manta"><a href="https://android.googlesource.com/device/samsung/manta/+/10299be">10299be</a> :  manta: build libmllite from source<br />
+<a href="https://android.googlesource.com/device/samsung/manta/+/017ed8f">017ed8f</a> :  manta: update prebuilt kernel<br />
+</div></p>
+
+<p><h2><a href="#" id="platform_external_apache-harmony-show" class="showLink" onclick="show('platform_external_apache-harmony');return false;">+</a><a href="#" id="platform_external_apache-harmony-hide" class="hideLink" onclick="hide('platform_external_apache-harmony');return false;">-</a>&nbsp;<a name="platform_external_apache-harmony" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/external/apache-harmony">platform/external/apache-harmony</a></h2>
+<div id="platform_external_apache-harmony"><a href="https://android.googlesource.com/platform/external/apache-harmony/+/4a932e7">4a932e7</a> :  Fix flaky test ThreadStartTest<br />
+</div></p>
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="footer">
+  <div class="container">
+  	<div class="row">
+	<div class="col-md-6">
+    <p class="text-muted">&copy; Copyright 2015 Novoda Ltd., All Rights Reserved.</p>
+	</div>
+	</div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59687390-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+
