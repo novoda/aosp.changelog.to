@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Novoda Ltd.">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" >
+<link rel="stylesheet" type="text/css" href="./assets/style.css" >
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="./assets/favicon.svg" type="image/svg">
+<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+<link rel="author" href="http://www.novoda.com/" >
+
+<title>android-6.0.1_r30 to android-6.0.1_r31 AOSP changelog</title>
+
+<script>
+function show(sectionId) {
+	if (document.getElementById(sectionId)) {
+		document.getElementById(sectionId+'-show').style.display = 'none';
+		document.getElementById(sectionId+'-hide').style.display = 'inline';
+		document.getElementById(sectionId).style.display = 'block';
+	}
+}
+
+function hide(sectionId) {
+	if (document.getElementById(sectionId)) {
+		document.getElementById(sectionId+'-show').style.display = 'inline';
+		document.getElementById(sectionId+'-hide').style.display = 'none';
+		document.getElementById(sectionId).style.display = 'none';
+	}
+}
+</script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./index.html">AOSP Changelogs</a>         
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <a class="navbar-brand" href="http://www.novoda.com"><img class="navbar-logo" src="./assets/logo-blue.svg" /></a>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container card">
+<div class="row">
+	<div class="col-md-12">
+		<h1>android-6.0.1_r30 to android-6.0.1_r31 AOSP changelog</h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+<p>This only includes the Android Open Source Project changes and does not include any changes
+in any proprietary components included by Google or any hardware manufacturer. The raw log was 
+generated using a modified version of <a href="https://groups.google.com/d/msg/android-building/0DtsHawjs4k/And8o3Dni_UJ">this script</a> written by <a href="https://plus.google.com/112218872649456413744/posts">JBQ</a> and improved by <a href="https://plus.google.com/+AlSutton/posts">Al Sutton</a>.</p>
+
+<p><strong>Please do not copy this without attribution to this site and JBQ for the original script.</strong></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="changes">		
+<p><h2><a href="#" id="platform_art-show" class="showLink" onclick="show('platform_art');return false;">+</a><a href="#" id="platform_art-hide" class="hideLink" onclick="hide('platform_art');return false;">-</a>&nbsp;<a name="platform_art" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/art">platform/art</a></h2>
+<div id="platform_art"><a href="https://android.googlesource.com/platform/art/+/4d93433">4d93433</a> :  Add missing null check to String::ToCharArray<br />
+<a href="https://android.googlesource.com/platform/art/+/7f57e8c">7f57e8c</a> :  [WIP] ART: Write-protect TLS<br />
+<a href="https://android.googlesource.com/platform/art/+/4833277">4833277</a> :  ART: Change UninitializedThis tracking in the verifier<br />
+<a href="https://android.googlesource.com/platform/art/+/603b4c2">603b4c2</a> :  Fix some java_lang_Class related moving GC bugs<br />
+<a href="https://android.googlesource.com/platform/art/+/c1956de">c1956de</a> :  Fix compaction bug in Class_getDeclaredMethodsUnchecked<br />
+<a href="https://android.googlesource.com/platform/art/+/d6ec651">d6ec651</a> :  ART: Sometimes even empty methods take forever to verify<br />
+<a href="https://android.googlesource.com/platform/art/+/c2d3221">c2d3221</a> :  Quick: Abolish kMirOpCheckPart2.<br />
+<a href="https://android.googlesource.com/platform/art/+/85336e3">85336e3</a> :  Fix broken checks in IsValidPartOfMemberNameUtf8Slow.<br />
+<a href="https://android.googlesource.com/platform/art/+/38f2085">38f2085</a> :  Update the remaining input index of phis after deleting an input.<br />
+<a href="https://android.googlesource.com/platform/art/+/3a01631">3a01631</a> :  ART: Fix loop information after dead code elimination<br />
+<a href="https://android.googlesource.com/platform/art/+/06cb4a9">06cb4a9</a> :  Fix constructor access check through reflection<br />
+</div></p>
+
+<p><h2><a href="#" id="platform_bionic-show" class="showLink" onclick="show('platform_bionic');return false;">+</a><a href="#" id="platform_bionic-hide" class="hideLink" onclick="hide('platform_bionic');return false;">-</a>&nbsp;<a name="platform_bionic" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/bionic">platform/bionic</a></h2>
+<div id="platform_bionic"><a href="https://android.googlesource.com/platform/bionic/+/8a19e09">8a19e09</a> :  Update timezone data to 2016a<br />
+<a href="https://android.googlesource.com/platform/bionic/+/12123df">12123df</a> :  Update timezone data to 2016a<br />
+<a href="https://android.googlesource.com/platform/bionic/+/4f80102">4f80102</a> :  Fix potential race condition on CTS TC pthread_gettid_np<br />
+<a href="https://android.googlesource.com/platform/bionic/+/c3351ea">c3351ea</a> :  Work around incorrect dt_needed entries<br />
+<a href="https://android.googlesource.com/platform/bionic/+/4cb434d">4cb434d</a> :  Fix regression in crash reporting<br />
+</div></p>
+
+<p><h2><a href="#" id="platform_cts-show" class="showLink" onclick="show('platform_cts');return false;">+</a><a href="#" id="platform_cts-hide" class="hideLink" onclick="hide('platform_cts');return false;">-</a>&nbsp;<a name="platform_cts" class="nonLink">Project:</a> <a href="https://android.googlesource.com/platform/cts">platform/cts</a></h2>
+<div id="platform_cts"><a href="https://android.googlesource.com/platform/cts/+/2639291">2639291</a> :  Camera: update FPS range check per spec update<br />
+<a href="https://android.googlesource.com/platform/cts/+/57c15f2">57c15f2</a> :  CTS test for robust handling of invalid cmap<br />
+<a href="https://android.googlesource.com/platform/cts/+/6dd5e73">6dd5e73</a> :  MonkeyTests assertion failures errors. Limit the amount of error data contained in an assertion failue<br />
+<a href="https://android.googlesource.com/platform/cts/+/ed4386b">ed4386b</a> :  Revert "CTS: Add testConnectivityConstraintExecutes_withMobile to knownfailures"<br />
+<a href="https://android.googlesource.com/platform/cts/+/44c49bc">44c49bc</a> :  CTS fix: match test to CDD memory requirements<br />
+<a href="https://android.googlesource.com/platform/cts/+/3a15653">3a15653</a> :  DO NOT MERGE: Revert "Camera: cross check camera2 features"<br />
+<a href="https://android.googlesource.com/platform/cts/+/820440b">820440b</a> :  DO NOT MERGE: CameraITS: relax test_blackwhite threshold<br />
+<a href="https://android.googlesource.com/platform/cts/+/b0c1112">b0c1112</a> :  Revert "MediaMetadataRetrieverTest: add new test to handle overflowed padding."<br />
+<a href="https://android.googlesource.com/platform/cts/+/8327555">8327555</a> :  MediaMetadataRetrieverTest: remove unused import to fix compile error.<br />
+<a href="https://android.googlesource.com/platform/cts/+/0d059db">0d059db</a> :  Update full alarm test requirements<br />
+<a href="https://android.googlesource.com/platform/cts/+/0612101">0612101</a> :  DO NOT MERGE - MediaServerCrashTest: add testDrmManagerClientReset.<br />
+<a href="https://android.googlesource.com/platform/cts/+/a74beb1">a74beb1</a> :  MediaServerCrashTest: add testDrmManagerClientReset.<br />
+<a href="https://android.googlesource.com/platform/cts/+/404bbc3">404bbc3</a> :  Reduce CTS audio requirements for low memory devices<br />
+<a href="https://android.googlesource.com/platform/cts/+/aec67ad">aec67ad</a> :  Do not test AudioPlayback if system doesn't have audio out<br />
+<a href="https://android.googlesource.com/platform/cts/+/96f4d40">96f4d40</a> :  Camera: create camera test package<br />
+<a href="https://android.googlesource.com/platform/cts/+/bb7fb44">bb7fb44</a> :  Fix timestamps sort in UiAutomationTest.testWindowContentFrameStats<br />
+<a href="https://android.googlesource.com/platform/cts/+/21a8bd6">21a8bd6</a> :  Fix for testBadSurfaceDimensions<br />
+<a href="https://android.googlesource.com/platform/cts/+/f0f730c">f0f730c</a> :  Enforce the valid range of psc, pci and lac/cid for primary cells.<br />
+<a href="https://android.googlesource.com/platform/cts/+/aba8142">aba8142</a> :  DO NOT MERGE: Revert "Add build number into CTS Verifier."<br />
+<a href="https://android.googlesource.com/platform/cts/+/9fa97c2">9fa97c2</a> :  Add new keyguard disable features tests for primary profile to CTS Verifier<br />
+<a href="https://android.googlesource.com/platform/cts/+/1e44c21">1e44c21</a> :  SensorBatching Test Fixes<br />
+<a href="https://android.googlesource.com/platform/cts/+/fc56b9b">fc56b9b</a> :  Add fingerprint feature to cts verifier app<br />
+<a href="https://android.googlesource.com/platform/cts/+/b3a7431">b3a7431</a> :  Remove cts-verifier tests for two intents.<br />
+<a href="https://android.googlesource.com/platform/cts/+/ee509b7">ee509b7</a> :  DO NOT MERGE CTS device-side preconditions for MNC<br />
+<a href="https://android.googlesource.com/platform/cts/+/0e31d66">0e31d66</a> :  Camera: read exposure value range if possible<br />
+<a href="https://android.googlesource.com/platform/cts/+/b1adf9e">b1adf9e</a> :  Make sure the next case started after previous case finished<br />
+<a href="https://android.googlesource.com/platform/cts/+/442a181">442a181</a> :  Selectively delete files from the sdcard<br />
+<a href="https://android.googlesource.com/platform/cts/+/0ea4882">0ea4882</a> :  Increase timeout for gtest runs.<br />
+<a href="https://android.googlesource.com/platform/cts/+/15dbbfa">15dbbfa</a> :  Bump CTS 6.0R3 for Security Releases.<br />
+<a href="https://android.googlesource.com/platform/cts/+/dd58e48">dd58e48</a> :  Revert "Add build number into CTS Verifier."<br />
+<a href="https://android.googlesource.com/platform/cts/+/aaf61c0">aaf61c0</a> :  Make copy_media.sh POSIX compatible<br />
+<a href="https://android.googlesource.com/platform/cts/+/cc728ce">cc728ce</a> :  CTS: PO tests for DISALLOW_CONFIG_VPN<br />
+<a href="https://android.googlesource.com/platform/cts/+/c0ffa1f">c0ffa1f</a> :  Media tests should use redirector.gvt1.com<br />
+<a href="https://android.googlesource.com/platform/cts/+/26f8a4d">26f8a4d</a> :  Fixed CtsVerifier version<br />
+<a href="https://android.googlesource.com/platform/cts/+/d7cad88">d7cad88</a> :  Revert "DO NOT MERGE: Fix Bitmap and NinePatch drawable tests for non-mdpi devices"<br />
+<a href="https://android.googlesource.com/platform/cts/+/2c43901">2c43901</a> :  Fix for Job Scheduler Charging test case<br />
+<a href="https://android.googlesource.com/platform/cts/+/7712881">7712881</a> :  Revert "Revert "CTS: Tests for DISALLOW_CONFIG_VPN""<br />
+<a href="https://android.googlesource.com/platform/cts/+/c300031">c300031</a> :  Revert "CTS: Tests for DISALLOW_CONFIG_VPN"<br />
+<a href="https://android.googlesource.com/platform/cts/+/e612a9e">e612a9e</a> :  Basic test of android.media.RemoteController<br />
+<a href="https://android.googlesource.com/platform/cts/+/92ad9e4">92ad9e4</a> :  Make AES*CipherTest explicitly use Android Keystore Provider.<br />
+<a href="https://android.googlesource.com/platform/cts/+/d3169b6">d3169b6</a> :  TIF: Make sure that Cursor.moveToNext() is called before using Cursor<br />
+<a href="https://android.googlesource.com/platform/cts/+/3e3e4ab">3e3e4ab</a> :  removing android.security.cts.ServicePermissionsTest#testDumpProtected from knownfailures<br />
+<a href="https://android.googlesource.com/platform/cts/+/a14e074">a14e074</a> :  DO NOT MERGE: Remove DeadObjectException from dumpservice failure condition.<br />
+<a href="https://android.googlesource.com/platform/cts/+/f60373a">f60373a</a> :  Revert "Camera: mark testFocusDistanceControl known failure"<br />
+<a href="https://android.googlesource.com/platform/cts/+/3c21781">3c21781</a> :  MediaMetadataRetrieverTest: add new test to handle overflowed padding.<br />
+<a href="https://android.googlesource.com/platform/cts/+/bd290de">bd290de</a> :  disable a bunch of test failures for CTS 6.0R2<br />
+<a href="https://android.googlesource.com/platform/cts/+/45dd49f">45dd49f</a> :  Camera: mark testFocusDistanceControl known failure<br />
+<a href="https://android.googlesource.com/platform/cts/+/4e485e6">4e485e6</a> :  EncodeDecodeTest: use timeout for decoder.dequeueInputBuffer<br />
+<a href="https://android.googlesource.com/platform/cts/+/92eba40">92eba40</a> :  Revert "DO NOT MERGE CTS device-side preconditions for MNC"<br />
+<a href="https://android.googlesource.com/platform/cts/+/e989c0c">e989c0c</a> :  Revert "DO NOT MERGE CTS host-side preconditions for MNC"<br />
+<a href="https://android.googlesource.com/platform/cts/+/edf584b">edf584b</a> :  Dynamically load the list of runtime permissions.<br />
+<a href="https://android.googlesource.com/platform/cts/+/d001dbc">d001dbc</a> :  Added location tests for BYOD in cts-verfier.<br />
+<a href="https://android.googlesource.com/platform/cts/+/9fb50b6">9fb50b6</a> :  Fix bugs regarding CTS fails for VP8 codec with low performance<br />
+<a href="https://android.googlesource.com/platform/cts/+/e3d326e">e3d326e</a> :  DO NOT MERGE: Fix testVirtualDisplayRecycles fail for no thread racing protection for mNumTextureUpdated<br />
+<a href="https://android.googlesource.com/platform/cts/+/2840e5c">2840e5c</a> :  Fixed break #2<br />
+<a href="https://android.googlesource.com/platform/cts/+/971aa2a">971aa2a</a> :  DO NOT MERGE: Fixed breakage<br />
+<a href="https://android.googlesource.com/platform/cts/+/1296058">1296058</a> :  DO NOT MERGE: Bumping CTS/CTS Verifier version to CTS 6.0R2.<br />
+<a href="https://android.googlesource.com/platform/cts/+/0efe735">0efe735</a> :  Relieve Sensor Event Gap Test Criterion<br />
+<a href="https://android.googlesource.com/platform/cts/+/40af6fa">40af6fa</a> :  Don't run Wifi scan timestamp tests when location is turned off.<br />
+<a href="https://android.googlesource.com/platform/cts/+/60b9818">60b9818</a> :  Add a build for CTS Verifier framework library.<br />
+<a href="https://android.googlesource.com/platform/cts/+/52013e1">52013e1</a> :  Fix for Idle Mode Constraint test<br />
+<a href="https://android.googlesource.com/platform/cts/+/d8972ff">d8972ff</a> :  DO NOT MERGE CTS host-side preconditions for MNC<br />
+<a href="https://android.googlesource.com/platform/cts/+/b5f74c3">b5f74c3</a> :  Fix android.os.cts.SeccompTest#testKernelBasicTests under Android Native Bridge.<br />
+<a href="https://android.googlesource.com/platform/cts/+/5b0df2c">5b0df2c</a> :  DO NOT MERGE: fixed breakages<br />
+<a href="https://android.googlesource.com/platform/cts/+/b15e4eb">b15e4eb</a> :  DO NOT MERGE: disable android.media.cts.EncodeVirtualDisplayTest#testEncodeVirtualDisplay as it fails on nexus 10<br />
+<a href="https://android.googlesource.com/platform/cts/+/5a5a2bb">5a5a2bb</a> :  Add reference url to XML reports<br />
+<a href="https://android.googlesource.com/platform/cts/+/c8a9a00">c8a9a00</a> :  Enable test of events occuring after AudioRecord.stop<br />
+<a href="https://android.googlesource.com/platform/cts/+/b8fbd66">b8fbd66</a> :  Fix testSetPreviewTextureBothCallbacks wait timeout<br />
+<a href="https://android.googlesource.com/platform/cts/+/3cf33b6">3cf33b6</a> :  Revert "DO NOT MERGE: improve TestVirtualDisplayRecycles to reduce memory usage"<br />
+<a href="https://android.googlesource.com/platform/cts/+/c891087">c891087</a> :  media: Add volatile to mThreadStarted to make sure the thread can stop properly.<br />
+<a href="https://android.googlesource.com/platform/cts/+/2ef9c1b">2ef9c1b</a> :  DO NOT MERGE: Fix Bitmap and NinePatch drawable tests for non-mdpi devices<br />
+<a href="https://android.googlesource.com/platform/cts/+/f8b0e03">f8b0e03</a> :  DO NOT MERGE: remove duplicate knownfailures<br />
+<a href="https://android.googlesource.com/platform/cts/+/10b5ab9">10b5ab9</a> :  DO NOT MERGE: fixed build breakage<br />
+<a href="https://android.googlesource.com/platform/cts/+/273af31">273af31</a> :  DO NOT MERGE: disable camera2 tests<br />
+<a href="https://android.googlesource.com/platform/cts/+/a786250">a786250</a> :  DO NOT MERGE: improve TestVirtualDisplayRecycles to reduce memory usage<br />
+<a href="https://android.googlesource.com/platform/cts/+/d774dd4">d774dd4</a> :  Revert "Revert "DO NOT MERGE Capture fields in CTS: ro.build.version.base_os ro.build.version.security_patch""<br />
+<a href="https://android.googlesource.com/platform/cts/+/3bce5d4">3bce5d4</a> :  Revert "DO NOT MERGE Capture fields in CTS: ro.build.version.base_os ro.build.version.security_patch"<br />
+<a href="https://android.googlesource.com/platform/cts/+/3d6f8bb">3d6f8bb</a> :  DO NOT MERGE CTS device-side preconditions for MNC<br />
+<a href="https://android.googlesource.com/platform/cts/+/eef7e5a">eef7e5a</a> :  Reduce EGLCleanup test iterations<br />
+<a href="https://android.googlesource.com/platform/cts/+/bb1d5a7">bb1d5a7</a> :  Update the build version to 6.0.1.<br />
+<a href="https://android.googlesource.com/platform/cts/+/b453110">b453110</a> :  Camera: remove FREEFORM cropping check for FULL device<br />
+<a href="https://android.googlesource.com/platform/cts/+/b068f19">b068f19</a> :  Adjust telecom setup timeout values to be more generous<br />
+<a href="https://android.googlesource.com/platform/cts/+/ac4c6d7">ac4c6d7</a> :  Update 320dpi &amp; 360dpi small/normal memory requirements<br />
+<a href="https://android.googlesource.com/platform/cts/+/bdfeea4">bdfeea4</a> :  CTS Verifier fix latency estimation for Loopback test<br />
+<a href="https://android.googlesource.com/platform/cts/+/5863eaf">5863eaf</a> :  Use FLAG_RECEIVER_FOREGROUND for ordered broadcasts<br />
+<a href="https://android.googlesource.com/platform/cts/+/2cb7235">2cb7235</a> :  Revert "DO NOT MERGE ANYWHERE: mark known failure camera tests"<br />
+<a href="https://android.googlesource.com/platform/cts/+/1b64814">1b64814</a> :  media: DecoderTest: make sure we call AudioTrack.stop()<br />
+<a href="https://android.googlesource.com/platform/cts/+/e8a13b1">e8a13b1</a> :  Fix for Frequency Tests to match CDD requirements<br />
+<a href="https://android.googlesource.com/platform/cts/+/e5ea9d7">e5ea9d7</a> :  DO NOT MERGE ANYWHERE: mark known failure camera tests<br />
+<a href="https://android.googlesource.com/platform/cts/+/732751c">732751c</a> :  Fix report latency overflow in DeviceSuspendTest<br />
+<a href="https://android.googlesource.com/platform/cts/+/dbe0410">dbe0410</a> :  camera2: Clean up render script context<br />
+<a href="https://android.googlesource.com/platform/cts/+/ad3e7df">ad3e7df</a> :  Skip assist CTS tests on low ram devices<br />
+<a href="https://android.googlesource.com/platform/cts/+/dd75b7f">dd75b7f</a> :  DO NOT MERGE Fix CTS failures on AudioFlingerBinderTest for case where remote submix audio HAL is not included test_setMasterMute test_setMasterVolume<br />
+<a href="https://android.googlesource.com/platform/cts/+/3ef522a">3ef522a</a> :  Fix the issue in testCalculateLength<br />
+<a href="https://android.googlesource.com/platform/cts/+/147c5b1">147c5b1</a> :  Remove a cross-profile app linking test.<br />
+<a href="https://android.googlesource.com/platform/cts/+/72ebd2f">72ebd2f</a> :  Runtime hint for android.adminhostside CTS test<br />
+<a href="https://android.googlesource.com/platform/cts/+/3aeb0d3">3aeb0d3</a> :  Enable SPEAKERPHONE CTS tests.<br />
+<a href="https://android.googlesource.com/platform/cts/+/2b51a7c">2b51a7c</a> :  fix failure line handling for VideEncoderDecoderTest.<br />
+<a href="https://android.googlesource.com/platform/cts/+/fde5384">fde5384</a> :  CTS: Tests for DISALLOW_CONFIG_VPN<br />
+<a href="https://android.googlesource.com/platform/cts/+/0c4e033">0c4e033</a> :  remove TYPE_ORIENTATION sensor requirement.<br />
+<a href="https://android.googlesource.com/platform/cts/+/8ea1911">8ea1911</a> :  Fix timeout for testCanInstallValidRsaKeypair in hostsidetests<br />
+<a href="https://android.googlesource.com/platform/cts/+/0b8a4c0">0b8a4c0</a> :  DO NOT MERGE media: add mpeg4 qcif test to VideoDecoderPerfTest.<br />
+<a href="https://android.googlesource.com/platform/cts/+/62b69b9">62b69b9</a> :  Refactoring the updatePassButton methods<br />
+<a href="https://android.googlesource.com/platform/cts/+/363df32">363df32</a> :  Camera: skip unsupported stream combination<br />
+<a href="https://android.googlesource.com/platform/cts/+/2621f72">2621f72</a> :  Fix bugs regarding TextView layout size with large font scale in ScrollingText<br />
+<a href="https://android.googlesource.com/platform/cts/+/27c55e2">27c55e2</a> :  CTS: Add testConnectivityConstraintExecutes_withMobile to knownfailures<br />
+<a href="https://android.googlesource.com/platform/cts/+/7dc91b3">7dc91b3</a> :  Add FileSystemPermissionTest exception for /dev/dri/renderD129.<br />
+<a href="https://android.googlesource.com/platform/cts/+/3304976">3304976</a> :  Add FileSystemPermissionTest exception for DRM-based GPU drivers.<br />
+<a href="https://android.googlesource.com/platform/cts/+/4ca5414">4ca5414</a> :  CTS: android.text.method.cts related tests failing<br />
+<a href="https://android.googlesource.com/platform/cts/+/accb996">accb996</a> :  Fix build<br />
+<a href="https://android.googlesource.com/platform/cts/+/6b8eae4">6b8eae4</a> :  Remove unnecessary layout request, avoid obtaining wrong bounds rect<br />
+<a href="https://android.googlesource.com/platform/cts/+/bf1875a">bf1875a</a> :  Add an option to use log saver for generated XML report<br />
+<a href="https://android.googlesource.com/platform/cts/+/1b0bd2c">1b0bd2c</a> :  [CtsVerfier] ScreenLockBoundKeys - use different key ID<br />
+<a href="https://android.googlesource.com/platform/cts/+/9edd486">9edd486</a> :  Bug: 23003511 Fix CTS: AudioManagerTest#testSoundEffects failing<br />
+<a href="https://android.googlesource.com/platform/cts/+/38a07ad">38a07ad</a> :  CTS runner fixes<br />
+<a href="https://android.googlesource.com/platform/cts/+/b6ab3b2">b6ab3b2</a> :  MIDI CTS: remove tests that pass null callback<br />
+<a href="https://android.googlesource.com/platform/cts/+/861fc41">861fc41</a> :  Revert "Bug: 23003511 CTS: AudioManagerTest#testSoundEffects failing"<br />
+<a href="https://android.googlesource.com/platform/cts/+/6ecbb88">6ecbb88</a> :  Update CTS for unsupported legacy ConnectivityManager APIs<br />
+<a href="https://android.googlesource.com/platform/cts/+/f049e59">f049e59</a> :  Fix contacts provider cts tests<br />
+<a href="https://android.googlesource.com/platform/cts/+/954eefe">954eefe</a> :  media: combine log to reduce the size<br />
+<a href="https://android.googlesource.com/platform/cts/+/b999e79">b999e79</a> :  Add MIDI feature to MNC section<br />
+<a href="https://android.googlesource.com/platform/cts/+/d173212">d173212</a> :  Permissions: Fix Auth CTS tests to reflect changes.<br />
+<a href="https://android.googlesource.com/platform/cts/+/53b27bd">53b27bd</a> :  Verify uninstall using "pm list".<br />
+<a href="https://android.googlesource.com/platform/cts/+/bdf0b8e">bdf0b8e</a> :  testExtractAlpha was asserting a bug<br />
+<a href="https://android.googlesource.com/platform/cts/+/a479b2c">a479b2c</a> :  CTS: TelephonyProviderTest failing<br />
+<a href="https://android.googlesource.com/platform/cts/+/40db3d8">40db3d8</a> :  media: use small frame size for resource manager test.<br />
+<a href="https://android.googlesource.com/platform/cts/+/edd4ec4">edd4ec4</a> :  Update last public framework attribute to pass CTS test.<br />
+<a href="https://android.googlesource.com/platform/cts/+/03db252">03db252</a> :  Revert "add more logging to monkey seed test"<br />
+<a href="https://android.googlesource.com/platform/cts/+/d32ddbf">d32ddbf</a> :  Add Ble test cases to BuildCtsTemporarilyKnownFailureList.<br />
+<a href="https://android.googlesource.com/platform/cts/+/fcd0c82">fcd0c82</a> :  Add logging statements to debug hangs.<br />
+<a href="https://android.googlesource.com/platform/cts/+/6716917">6716917</a> :  media: deliver report to host<br />
+<a href="https://android.googlesource.com/platform/cts/+/98a6bcd">98a6bcd</a> :  videoperf: specify timeout for VideoEncoderDecoderTest<br />
+<a href="https://android.googlesource.com/platform/cts/+/8a0ebb8">8a0ebb8</a> :  use locked orientation instead of "nosensor"<br />
+<a href="https://android.googlesource.com/platform/cts/+/5aafe29">5aafe29</a> :  MediaSyncTest: use float for playback rate tolerance to keep consistent with others.<br />
+<a href="https://android.googlesource.com/platform/cts/+/e11e244">e11e244</a> :  media: deliver test report to host.<br />
+<a href="https://android.googlesource.com/platform/cts/+/e548f98">e548f98</a> :  CTS: Adds conditions to bypass FileSystemPermissionTest.testDeviceTreeCpuCurrent<br />
+<a href="https://android.googlesource.com/platform/cts/+/308abc6">308abc6</a> :  videoperf: avoid potential ArrayIndexOutOfBounds<br />
+<a href="https://android.googlesource.com/platform/cts/+/7cc7c32">7cc7c32</a> :  Use example.com for strict mode cts test.<br />
+<a href="https://android.googlesource.com/platform/cts/+/4b61d4c">4b61d4c</a> :  Remove not relevant browser tests - APIs are gone<br />
+<a href="https://android.googlesource.com/platform/cts/+/71dba80">71dba80</a> :  Remove android.security.cts.SeccompBpfTest.<br />
+<a href="https://android.googlesource.com/platform/cts/+/71e5ed7">71e5ed7</a> :  A better shadow value to cover more devices, handle TV theme override.<br />
+<a href="https://android.googlesource.com/platform/cts/+/7dd1e17">7dd1e17</a> :  Respect hard restriction to minimum password length in CTS<br />
+<a href="https://android.googlesource.com/platform/cts/+/7bea994">7bea994</a> :  Use simple break strategy for testSetTextLong<br />
+<a href="https://android.googlesource.com/platform/cts/+/a99d048">a99d048</a> :  Split CTS-DEQP plan into two plans<br />
+<a href="https://android.googlesource.com/platform/cts/+/7542792">7542792</a> :  Cherrypick the following CLs from LMP MR1<br />
+<a href="https://android.googlesource.com/platform/cts/+/039b00b">039b00b</a> :  Fix up Looper preparation.<br />
+<a href="https://android.googlesource.com/platform/cts/+/69c85ad">69c85ad</a> :  Fix build<br />
+<a href="https://android.googlesource.com/platform/cts/+/a01622e">a01622e</a> :  Dismiss dialogs during indeterminate progress dialog CTS tests<br />
+<a href="https://android.googlesource.com/platform/cts/+/4eaca29">4eaca29</a> :  Use dup2() to make message queue tests less flaky.<br />
+<a href="https://android.googlesource.com/platform/cts/+/22e6c1c">22e6c1c</a> :  Fix Drawable, PopupWindow CTS breakages<br />
+<a href="https://android.googlesource.com/platform/cts/+/ac23f11">ac23f11</a> :  fix build<br />
+<a href="https://android.googlesource.com/platform/cts/+/6da731e">6da731e</a> :  Remove WebGL conformance tests from CTS<br />
+<a href="https://android.googlesource.com/platform/cts/+/b35b30c">b35b30c</a> :  Temp disables for deqp tests failing due to missing driver fixes.<br />
+<a href="https://android.googlesource.com/platform/cts/+/3762271">3762271</a> :  Ensure JobScheduler Connectivity CTS reenables WiFI<br />
+<a href="https://android.googlesource.com/platform/cts/+/c145421">c145421</a> :  Temporarily disable flaky EGL tests while waiting for driver fixes<br />
+<a href="https://android.googlesource.com/platform/cts/+/71f03b6">71f03b6</a> :  Failing android.content.ContentResolver tests to CTS staging<br />
+<a href="https://android.googlesource.com/platform/cts/+/84d24c0">84d24c0</a> :  Add workaround for ContetxtImpl.setTheme(), verify test setup<br />
+<a href="https://android.googlesource.com/platform/cts/+/c9bc142">c9bc142</a> :  Hide more failing CTS-DEQP tests.<br />
+<a href="https://android.googlesource.com/platform/cts/+/76fc052">76fc052</a> :  Hide failing GLES31 texture.border_clamp tests.<br />
+<a href="https://android.googlesource.com/platform/cts/+/93ee255">93ee255</a> :  Add STOPSHIP to CTS-DEQP plan generation.<br />
+<a href="https://android.googlesource.com/platform/cts/+/dbf386e">dbf386e</a> :  Test for issue #16013164: protect app ops setMode().<br />
+</div></p>
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="footer">
+  <div class="container">
+  	<div class="row">
+	<div class="col-md-6">
+    <p class="text-muted">&copy; Copyright 2015 Novoda Ltd., All Rights Reserved.</p>
+	</div>
+	</div>
+  </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59687390-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+
