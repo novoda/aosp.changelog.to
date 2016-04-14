@@ -2,7 +2,7 @@
 Receive a notification email every time a new git tag is found in AOSP<br/>
 _Will_ generates a change log between different aosp tags. 
 
-This tool works on your local checkout of the AOSP code. Be prepared, have the repo tool installed and reserve 100GB of disk. For detailed requirementes see [source.android.com](https://source.android.com/source/downloading.html).
+This tool works on your local checkout of the AOSP code. Be prepared, have the Repo tool installed and reserve 100GB of disk. For detailed requirementes see [source.android.com](https://source.android.com/source/downloading.html).
 
 ### Usage
 #### New tag notification
