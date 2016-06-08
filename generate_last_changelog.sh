@@ -19,17 +19,7 @@ TAGS_ARRAY=(`echo $LAST_TAGS | tr "," "\n"`)
 TARGET_TAG=${TAGS_ARRAY[0]}
 
 # Retrieve the tag right before the target one
-LAST_TAGS=$(git for-each-ref refs/tags --sort=refname --format='%(refname)'  | grep -o 'android\-[0-9][\.0-9]*_.*')
-TAGS_ARRAY=(`echo $LAST_TAGS | tr "," "\n"`)
-
-for (( t=1; t<${#TAGS_ARRAY[@]}; t++ ))
-do
-   if [ ${TAGS_ARRAY[$t]} = $TARGET_TAG ]
-   then
-     PREVIOUS_TAG=${TAGS_ARRAY[$t-1]}
-     break
-   fi        
-done
+PREVIOUS_TAG=$(git describe --abbrev=0 --tags $TARGET_TAG^)
 
 echo "Generating changelog from $PREVIOUS_TAG to $TARGET_TAG"
 
