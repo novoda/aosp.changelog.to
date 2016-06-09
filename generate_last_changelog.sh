@@ -2,6 +2,7 @@
 
 AOSP_DIRECTORY=$1
 WORK_DIRECTORY=./aosp/checkouts/build
+GENERATOR_BASE_DIR=$(pwd)
 
 # Prepare the AOSP working directory with the templates and executables used for the changelog generation
 if [ ! -d $AOSP_DIRECTORY ]; then
@@ -18,24 +19,6 @@ LAST_TAGS=$(git for-each-ref refs/tags --sort=-taggerdate --format='%(refname)' 
 TAGS_ARRAY=(`echo $LAST_TAGS | tr "," "\n"`)
 TARGET_TAG=${TAGS_ARRAY[0]}
 
-# Retrieve the tag right before the target one
-LAST_TAGS=$(git for-each-ref refs/tags --sort=refname --format='%(refname)'  | grep -o 'android\-[0-9][\.0-9]*_.*')
-TAGS_ARRAY=(`echo $LAST_TAGS | tr "," "\n"`)
-
-for (( t=1; t<${#TAGS_ARRAY[@]}; t++ ))
-do
-   if [ ${TAGS_ARRAY[$t]} = $TARGET_TAG ]
-   then
-     PREVIOUS_TAG=${TAGS_ARRAY[$t-1]}
-     break
-   fi        
-done
-
-echo "Generating changelog from $PREVIOUS_TAG to $TARGET_TAG"
-
-# Update the AOSP working directory with a repo sync to the target tag
-cd $AOSP_DIRECTORY
-repo init -u https://android.googlesource.com/platform/manifest -b $TARGET_TAG
-repo sync
-
-./get_gitlog.sh $PREVIOUS_TAG $TARGET_TAG
+echo "Target: $TARGET_TAG"
+cd $GENERATOR_BASE_DIR
+./generate_changelog_from_parent_tag.sh $TARGET_TAG $AOSP_DIRECTORY
