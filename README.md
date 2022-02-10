@@ -1,3 +1,5 @@
+# 🛑 THIS REPOSITORY IS OFFICIALLY NO LONGER UNDER MAINTENANCE since 10/02/2022 🛑
+
 # AOSP Changelog Generator
 Receive a notification email every time a new git tag is found in AOSP<br/>
 _Will_ generates a change log between different aosp tags. 
